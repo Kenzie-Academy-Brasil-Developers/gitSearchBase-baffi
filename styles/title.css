@@ -1,0 +1,17 @@
+h2{
+    font-size: 20px;
+}
+
+
+/* ********profile**** */
+
+h3{
+    color: var( --color-grey-7);
+
+}
+
+.span-prefile{
+    color: var(--color-grey-7);
+    opacity: 50%;
+}
+
