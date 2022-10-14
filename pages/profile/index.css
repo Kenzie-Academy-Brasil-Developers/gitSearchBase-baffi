@@ -1,1 +1,71 @@
 /* Desenvolva sua estilização aqui...*/
+body{
+    background-color: var(--color-grey-2);
+    width: 94%;
+    margin: 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.div-button-prefile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.div-prefile{
+    display: flex;
+    gap: 10px;
+}
+
+.div-info-prefile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.section-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.div-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--color-grey-7);
+    border: 1px Solid rgba(255, 255, 255, 0.12);
+    
+}
+
+.div-cards:hover{
+  
+    border: 1px solid var( --color-grey-7);
+    background-color: var(--color-grey-1);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s
+    
+}
+.div-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.div-cards-two{
+    display: flex;
+    margin: 16px;
+    flex-direction: column;
+    gap: 17px;
+}
+
