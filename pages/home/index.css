@@ -74,3 +74,26 @@ input{
     gap: 15px;
 }
 
+img{
+    cursor: pointer;
+}
+
+
+.loading{
+    animation: spinner 1s infinite linear;
+}
+
+@keyframes spinner {
+0%{
+    transform: rotate(0);
+}
+100%{
+    transform: rotate(360deg);
+}
+}
+
+
+@media (min-width: 768px) {
+    
+}
+
