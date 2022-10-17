@@ -44,7 +44,7 @@ function button() {
    
     button.addEventListener('click', (event) => {
         event.preventDefault()
-        window.location.replace('../../index.html')
+        window.location.replace('../pages/profile/index.html')
 
     })
 }
