@@ -22,6 +22,8 @@ header{
 .div-prefile{
     display: flex;
     gap: 10px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .div-info-prefile{
@@ -30,7 +32,7 @@ header{
     justify-content: space-evenly;
 }
 
-.section-cards{
+.list-cards{
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -42,6 +44,7 @@ header{
     gap: 30px;
     color: var(--color-grey-7);
     border: 1px Solid rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
     
 }
 
@@ -69,3 +72,28 @@ header{
     gap: 17px;
 }
 
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+
+@media (min-width: 768px) {
+    .list-cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    body{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .div-cards-two{
+        width: 400px;
+
+    }
+
+}

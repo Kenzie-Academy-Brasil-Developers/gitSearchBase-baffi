@@ -6,14 +6,19 @@
     width: 250px;
     border-radius: 4px;
     cursor: pointer;
-    /* opacity: 40%; */
+    opacity: 40%;
 }
 
-/* .button-section-black:hover{
+.button-section-black:hover{
     background-color: var(--color-brand-1);
     opacity: 100%;
     cursor: pointer;
-} */
+}
+
+.button-hover{
+    background-color: var(--color-brand-1);
+    opacity: 100%;
+}
 
 /* 
 ********prefile******** */
@@ -47,6 +52,11 @@
     width: 93px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.button-repositorio:hover{
+    background-color: var(--color-brand-1);
+    border: none;
 }
 
 .button-demo{
