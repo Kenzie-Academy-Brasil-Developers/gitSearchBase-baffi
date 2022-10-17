@@ -97,3 +97,18 @@ img{
     
 }
 
+@media (min-width: 768px) {
+
+    main{
+        display: flex;
+        flex-direction: row;
+    }
+    .section-pink{
+        width: 50%;
+        height: 100vh;
+    }
+    .section-black{
+        width: 50%;
+        height: 100vh;
+    }
+}
