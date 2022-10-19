@@ -73,9 +73,9 @@ header{
 }
 
 img{
-    width: 150px;
-    height: 150px;
+    
     border-radius: 100px;
+    width: 100px;
 }
 
 @media (min-width: 768px) {
