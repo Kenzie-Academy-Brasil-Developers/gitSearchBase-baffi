@@ -1,44 +1,25 @@
 // ********************logica buscar usuario no input***************
-
+import { getUser} from '../../scripts/api.js'
 
 function button() {
     let button = document.querySelector('.button-section-black')
 
-    button.addEventListener('click', (event) => {
+    button.addEventListener('click', async (event) => {
         event.preventDefault()
 
-        const name = document.querySelector('.inputHome')
-        const value = name.value
-        getUser(value)
-        window.location.replace('../../pages/profile/index.html')
 
+        let name = document.querySelector('.inputHome')       
+        let value = name.value 
+       await getUser(value)
+       
+        
+        window.location.assign('../../pages/profile/index.html')
+         renderRepo(data)
+        console.log(renderRepo(data));
     })
 }
 
 button()
-
-
-
-async function getUser(name) {
-
-    const baseUrl = `https://api.github.com`
-    const myHeaders = {
-        'content-Type': 'aplication/json'
-    }
-    // funcao de requisição
-    const user = await fetch(`${baseUrl}/users/${name}`, {
-        method: 'GET',
-        headers: myHeaders
-    })
-        .then(res => res.json())
-        .then(res => {             
-            console.log(name);
-            localStorage.setItem('prefile', name)
-         
-            
-        })
-}
-
 
 
 
@@ -77,7 +58,7 @@ const getGit = (button) => {
             button.innerHTML = ''
             button.innerText = 'Ver perfil no Github'
 
-            console.log(res);
+          
         })
     return git
 }
