@@ -13,7 +13,7 @@ function button() {
        await getUser(value)
        
         
-        window.location.assign('../../pages/profile/index.html')
+        window.location.assign('../pages/profile/index.html')
          renderRepo(data)
         console.log(renderRepo(data));
     })
