@@ -1,34 +1,9 @@
 
-const prefile = localStorage.getItem('prefile')
 
-
-const getUser = () => {
-
-  const baseUrl = `https://api.github.com`
-  const myHeaders = {
-    'content-Type': 'aplication/json'
-  }
-  
-  // funcao de requisição
-  fetch(`${baseUrl}/users/${prefile}`, {
-    method: 'GET',
-    headers: myHeaders
-  })
-    .then(res => res.json())
-    .then(res => {
-      render(res)
-      console.log(res);
-     
-    })
-}
-getUser()
-
-
-
-function render(elt) {
-  const header = document.querySelector('.header-render')  
-    const card = creatPrefile(elt)
-    header.appendChild(card)
+export function render(elt) {
+  const header = document.querySelector('.header-render') 
+  const card = creatPrefile(elt)
+  header.append(card)
 
 }
 
@@ -72,37 +47,19 @@ const creatPrefile = (elm) => {
 // **************requisicao repositorio*****************
 
 
-const getRepo = () => {
-
-  const baseUrl = `https://api.github.com/users/users/`
-  const myHeaders = {
-    'content-Type': 'aplication/json'
-  }
-  
-  // funcao de requisição
-  fetch(`${baseUrl}/repos`, {
-    method: 'GET',
-    headers: myHeaders
-  })
-    .then(res => res.json())
-    .then(res => {
-  
-      //  
-      // console.log(res);
-      // return res
-    })
-}
-getRepo()
 
 
 
-function renderRepo(arr) {
-  const ul = document.querySelector('.list-card')
+
+
+export function renderRepo(arr) {
+  const ul = document.querySelector('.list-cards')
 
   arr.forEach(elt => {
     const card = creatRepo(elt)
+    console.log(card);
 
-    ul.appendChild(card)
+    ul.append(card)
   })
 }
 
@@ -110,7 +67,7 @@ const creatRepo = (elm) => {
 
   const liCard = document.createElement('li')
   const divCard = document.createElement('div')
-  const divInfo = document.createElement('div') 
+  const divInfo = document.createElement('div')
   const h3 = document.createElement('h3')
   const p = document.createElement('p')
   const divButtonCard = document.createElement('div')
@@ -120,18 +77,18 @@ const creatRepo = (elm) => {
   liCard.classList.add('div-cards')
   divCard.classList.add('div-cards-two')
   divInfo.classList.add('div-info-cards')
-  h3.innerText = elm
-  p.innerText = elm
+  h3.innerText = elm.name
+  p.innerText = elm.description
   divButtonCard.classList.add = ('div-button-cards')
   buttonRepo.classList.add('button-repositorio')
   buttonDemo.classList.add('button-demo')
-  
+
 
   divInfo.append(h3, p)
   divButtonCard.append(buttonRepo, buttonDemo)
   divCard.append(divInfo, divButtonCard)
-  li.append(divCard)
+  liCard.append(divCard)
 
-  return li
+  return liCard
 
 }
