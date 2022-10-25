@@ -10,12 +10,11 @@ function button() {
 
         let name = document.querySelector('.inputHome')       
         let value = name.value 
-       await getUser(value)
-       
+        await getUser(value)       
         
         window.location.assign('../pages/profile/index.html')
          renderRepo(data)
-        console.log(renderRepo(data));
+        
     })
 }
 
@@ -69,45 +68,34 @@ search()
 
 
 
-/* Desenvolva sua lógica aqui...*/
-// const inputHover = () => {
-//     const input = document.querySelector('.inputHome')
-//     const button = document.querySelector('.button-section-black')
-//     console.log(button);
-//     input.addEventListener('click', (event) => {
-//         event.preventDefault()
 
-//         checkInputs()
-//     })
-// }
-// inputHover()
 
 
 // // ***********ativar input **************
 
-// const checkInputs = (input) => {
+const checkInputs = (input) => {
 
-//     var filled = true;
-//     if (input === "") {
-//         filled = false;
-//     }
-//     return filled;
-// }
-
-
-// const input = () => {
-//     let input = document.querySelector(".inputHome");
-//     let button = document.querySelector(".button-section-black");
+    var filled = true;
+    if (input === "") {
+        filled = false;
+    }
+    return filled;
+}
 
 
-//     input.addEventListener("keyup", function () {
-//         if (checkInputs(input)) {
-//             button.disabled = false;
-//         } else {
-//             button.disabled = true;
-//         }
+const input = () => {
+    let input = document.querySelector(".inputHome");
+    let button = document.querySelector(".button-section-black");
 
-//     });
 
-// }
-// input()
+    input.addEventListener("keyup", function () {
+        if (checkInputs(input)) {
+            button.disabled = false;
+        } else {
+            button.disabled = true;
+        }
+
+    });
+
+}
+input()

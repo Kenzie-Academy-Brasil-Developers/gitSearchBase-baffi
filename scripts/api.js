@@ -3,10 +3,6 @@ import { render} from '../pages/profile/render.js'
 
 let prefile = sessionStorage.getItem('prefile')
 
-
-
-
-
 export async function getUser(name) {
   const userGet = sessionStorage.getItem('prefile')
 
@@ -42,7 +38,7 @@ export const user = () => {
   }
   console.log(prefile);
   // funcao de requisição
-  fetch(`${baseUrl}/users/${prefile}`, {
+   fetch(`${baseUrl}/users/${prefile}`, {
     method: 'GET',
     headers: myHeaders
   })
